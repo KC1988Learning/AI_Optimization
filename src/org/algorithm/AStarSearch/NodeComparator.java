@@ -2,7 +2,8 @@ package org.algorithm.AStarSearch;
 
 import java.util.Comparator;
 
-public class NodeComparator implements Comparator<Node> {
+public class
+NodeComparator implements Comparator<Node> {
 
     @Override
     public int compare(Node node1, Node node2){
@@ -11,3 +12,5 @@ public class NodeComparator implements Comparator<Node> {
         return 0;
     }
 }
+
+
