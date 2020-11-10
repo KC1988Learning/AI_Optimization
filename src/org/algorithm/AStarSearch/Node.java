@@ -3,7 +3,7 @@ package org.algorithm.AStarSearch;
 public class Node {
 
     private int g; // shortest cost from starting point
-    private int h: // estimated cost from current to destination node
+    private int h; // estimated cost from current to destination node
     private int rowIndex;
     private int colIndex;
     private Node predecessor; // this is how we track the shortest path
