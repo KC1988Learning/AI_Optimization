@@ -104,7 +104,18 @@ public class SalesmanGenome implements Comparable{
 
     @Override
     public String toString(){
-        
+        StringBuilder sb = new StringBuilder();
+        sb.append("Path: ");
+        sb.append(startingCity);
+        for (int gene : genome){
+            sb.append(" ");
+            sb.append(gene);
+        }
+        sb.append(" ");
+        sb.append(startingCity);
+        sb.append("\nDistance: ");
+        sb.append(this.fitness);
+        return sb.toString();
     }
 
     @Override
