@@ -122,7 +122,7 @@ public class SalesmanGenome implements Comparable{
     public int compareTo(Object o){
         SalesmanGenome genome = (SalesmanGenome) o;
         if (this.fitness > genome.getFitness()){
-            return 1
+            return 1;
         } else if (this.fitness < genome.getFitness()) {
             return -1;
         } else {

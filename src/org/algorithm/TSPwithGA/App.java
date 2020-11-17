@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class App {
     public static void main(String[] args){
-        int numberOfCities = 3;
+        int numberOfCities = 5;
         int[][] travelPrices = new int[numberOfCities][numberOfCities];
         for (int i = 0; i < numberOfCities; i++){
             for (int j = 0; j < numberOfCities; j++){
@@ -20,6 +20,11 @@ public class App {
         }
 
         printTravelPrices(travelPrices, numberOfCities);
+
+        TSPSearch geneticAlgorithm = new TSPSearch(numberOfCities,
+                SelectType.ROULETTE, travelPrices, 0, 0);
+        SalesmanGenome result = geneticAlgorithm.optimize();
+        System.out.println(result);
     }
 
     public static void printTravelPrices(int[][] travelPrices,
@@ -27,8 +32,14 @@ public class App {
         for (int i = 0; i < numberOfCities; i++){
             for (int j = 0; j < numberOfCities; j++){
                 System.out.println(travelPrices[i][j]);
-
+                if (travelPrices[i][j]/10==0){
+                    System.out.println("  ");
+                }
+                else {
+                    System.out.println(' ');
+                }
             }
+            System.out.println("");
         }
     }
 }

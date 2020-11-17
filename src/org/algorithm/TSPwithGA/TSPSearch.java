@@ -21,6 +21,7 @@ public class TSPSearch {
                      int startingCity,
                      int targetFitness){
         this.numberOfCities = numberOfCities;
+        this.genomeSize = numberOfCities-1;
         this.selectType = selectType;
         this.travelPrices = travelPrices;
         this.startingCity = startingCity;
@@ -116,7 +117,7 @@ public class TSPSearch {
         if (length < n) return null;
 
         Collections.shuffle(list); // shuffle the list
-        return list.subList(0, n-1);
+        return list.subList(0, n);
     }
 
     /**
